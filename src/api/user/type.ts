@@ -10,11 +10,14 @@ export interface loginForm {
 /* 
 {
     code:200,
-    data:{token}
+    data:{token / message}
 }
 */
 interface dataType {
-  token: string;
+  // token?: string;：表示一个名为 token 的可选字符串属性。
+  // 使用这个接口描述的数据类型时，可以包含一个名为 token 的字符串属性，也可以不包含
+  token?: string;
+  message?: string;
 }
 
 export interface loginResponseData {

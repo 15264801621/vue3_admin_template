@@ -8,7 +8,10 @@ import "virtual:svg-icons-register";
 import "@/styles/index.scss";
 // 引入axios
 import axios from "axios";
-
+// 引入路由
+import router from "./router/index.ts";
+// 引入pinia
+import pinia from "@/store/index.ts";
 // 红色波浪线，没有定义ts 的类型和文件
 //@ts-expect-error
 import zhCn from "element-plus/dist/locale/zh-cn.mjs";
@@ -16,6 +19,9 @@ import zhCn from "element-plus/dist/locale/zh-cn.mjs";
 // console.log(import.meta.env);
 
 const app = createApp(App);
+app.use(router);
+app.use(pinia);
+
 app.use(ElementPlus, {
   locale: zhCn,
 });
